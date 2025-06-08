@@ -1,0 +1,76 @@
+<img style="z-index: -5; position: fixed; top: 0px; left: 0px; min-width: 100%; min-height: 100%;" src="http://i.imgur.com/u1wzhAo.png"><a href="/~Softball" style="position: fixed; top: 0px; left: 0px;">{CSS}</a><p></p><a href="/~Flinkley" style="position: fixed; top: 20px; left: 0px;">{BG}</a>
+<style>
+table, tr, td, div, #nppvma_petViewMainContent, .pet_image {
+	border: 0px !important;
+}
+td {
+	text-align: center !important;
+}
+.sidebar {
+	display: none;
+}
+.contentModuleHeader {
+	text-align: left !important;
+}
+.pet_image {
+	width: 500px !important;
+	height: 500px !important;
+}
+.contentModuleContent div {
+	margin: 0px !important;
+}
+.contentModule div {
+	margin-top: 60px;
+}
+#ziporen {
+	color: #000;
+}
+.contentModuleHeaderAlt, .contentModuleHeader {
+	background: #000 !important;
+	color: #fff !important;
+}
+#footer {
+	background: url("http://i.imgur.com/VphBlTj.png") top center;
+	color: #fff;
+}
+#header {
+	background: url("http://i.imgur.com/R0MCmm2.png") top right;
+}
+#ban {
+	background: url("http://i.imgur.com/bCB5u7B.png") top right;
+}
+#main {
+	margin-top: 10px;
+}
+.footerNifty {
+	display: none;
+}
+#header td {
+	color: #fff !important;
+}
+.user a, .user a:hover, .user a:visited, a:hover {
+	color: #BEA6C6 !important;
+}
+#header a {
+	color: #fff;
+}
+#footer a {
+	color: #fff;
+}
+.content a:link, .content a:hover, .content a:visited {
+	color: goldenrod;
+}
+.nav_image img {
+	height: 0px;
+	padding: 38px 0px 0px 0px;
+}
+ul.dropdown {
+	background: #73517E;
+	border: 1px solid #BEA6C6;
+}
+div.sf {
+	width: 100% !important;
+	margin-bottom: 20px;
+	color: #fff !important;
+}
+</style>
