@@ -1,0 +1,113 @@
+<style>
+body {
+	background: url("http://i.imgur.com/1vb2I1P.png") fixed;
+}
+body, .medText, #lookup {
+	color: #f62681;
+	padding-top: 25px;
+}
+#userneohome, #ncmall, #contentfooter, #superfooter, #header, #footer, .user, .user a, .sf a, #ban, hr, .sidebar, #nst, .user, .bb, .brand-mamabar {
+	display: none !important;
+}
+#ban, .contentModule, .contentModuleTable, .contentModuleContent, .contentModuleHeader, .contentModuleHeaderAlt, #main, #content {
+	background: none;
+	border: none;
+}
+.contentModuleHeader, .contentModuleHeaderAlt, strong {
+	text-align: center;
+	color: #00ffff;
+}
+a, a b, a:visited {
+	color: #9370db !important;
+}
+a:hover, a b:hover {
+	color: #008080 !important;
+}
+b, img {
+	color: #00ffff !important;
+	font-weight: 300;
+}
+#navbar {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	background: #9370db;
+	z-index: 9999999;
+	display: table;
+	border-spacing: 0px 0px;
+}
+#navbar a {
+	display: table-cell;
+	vertical-align: middle;
+	font: 9pt century;
+	color: #00ffff !important;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+#navbar a:hover {
+	background: #008080;
+	color: #f62681 !important;
+}
+.blurb {
+	margin: 15px 0;
+}
+.blurb p {
+	width: 46%;
+	margin: 0 2%;
+	float: left;
+	text-align: center;
+}
+.pets {
+	padding: 10px 0;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.pets img {
+	width: 90px;
+	margin: 10px;
+	border-radius: 99em;
+	padding: 5px;
+}
+.pets img:hover {
+	padding: 0;
+	border-width: 6px;
+}
+.bx-viewport {
+	height: auto !important;
+}
+.bx-clone {
+	display: none !important;
+}
+.bx-controls {
+	display: none;
+}
+#userneopets li {
+	display: block;
+	width: 20% !important;
+	margin: 0 0% !important;
+}
+#userneopets li a img {
+	margin: 0 auto;
+}
+#userneopets li a {
+	display: block;
+	margin-bottom: -3em;
+	margin-top: 1em;
+}
+ul#bxlist {
+	display: block;
+	width: 900px !important;
+	padding: -3;
+}
+</style><div id="navbar" style="position: fixed;">
+<a href="http://www.neopets.com/~Krawkodilla">Portfolio</a>
+<a href="http://www.neopets.com/userlookup.phtml?user=Coyotlcoatl">Librarians</a>
+<a href="http://www.neopets.com/userlookup.phtml?user=Zeinjavecoatl">Fodder</a>
+<a href="http://www.neopets.com/userlookup.phtml?user=VanitasMori">Spooky</a>
+<a href="http://www.neopets.com/userlookup.phtml?user=VanitasVivere">Misc</a>
+<a href="/~Teamug">graphics</a>
+<a href="/~fiziwhig">css</a>
+<a href="http://www.neopets.com/home/index.phtml">exit</a>
+</div>
