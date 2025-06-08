@@ -1,0 +1,856 @@
+<style>
+body {
+	margin: 0;
+	overflow: hidden;
+	background: url("http://i.imgur.com/W1zuUKp.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left top;
+	font: 11px verdana;
+}
+center font, td {
+	display: none;
+}
+.main td {
+	display: table-cell;
+}
+.title {
+	top: 450px;
+	width: 850px;
+	text-align: right;
+	font: 46px georgia;
+	color: #0ff;
+	line-height: 23px;
+}
+.title i {
+	letter-spacing: -2px;
+	color: #E65AD2;
+}
+.title span {
+	font: 25px georgia;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	letter-spacing: -1px;
+	color: #fff;
+}
+.nav {
+	top: 80px;
+	left: 155px;
+	width: 50px;
+	text-align: right;
+}
+.nav a {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	overflow: hidden;
+	background: url("http://i.imgur.com/jvkzweu.png");
+	margin: 5px;
+	text-decoration: none;
+	line-height: 120px;
+	color: #66a;
+	font-variant: small-caps;
+	text-align: right;
+}
+.nav a span {
+	display: block;
+	background: url("http://i.imgur.com/FUm69UM.png");
+	margin: 6px;
+	height: 36px;
+	width: 36px;
+}
+.nav a:hover, .nav a:hover span {
+	width: auto;
+	line-height: 36px;
+}
+.nav a:hover span {
+	padding: 0 8px;
+}
+.section {
+	background: url("http://i.imgur.com/jvkzweu.png");
+	border: 1px solid #aaa;
+	margin: 10px auto;
+	width: 650px;
+	display: block;
+	text-align: left;
+}
+.p {
+	margin: 8px;
+}
+.h {
+	text-align: center;
+	padding: 8px;
+	border-bottom: 1px #aaa solid;
+	background: url("http://i.imgur.com/jvkzweu.png");
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.pet {
+	width: 210px;
+	text-align: center;
+	margin: 2px 4px 4px 4px;
+	display: inline-block;
+	vertical-align: top;
+	overflow: auto;
+}
+.pet img {
+	width: 150px;
+	height: 150px;
+	margin-left: -45px;
+	background: #ccc;
+}
+.items {
+	display: inline-block;
+	width: 675px;
+	vertical-align: top;
+}
+.items img {
+	width: 75px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 2px;
+}
+.items span {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	margin: 2px;
+}
+.checklist div {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	line-height: 30px;
+	text-align: center;
+	margin: 6px 3px;
+}
+.done {
+	background: #cec;
+	border: 1px solid #4e4;
+}
+.not-done {
+	background: #ece;
+	border: 1px solid #e4e;
+}
+#gallery .items, #welcome .items {
+	width: auto;
+	margin: 8px;
+}
+.parts {
+	display: table;
+	width: 100%;
+}
+.parts .part {
+	display: table-cell;
+	padding: 6px;
+	text-align: center;
+}
+.parts .part .not-done, .parts .part .done {
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 8px;
+}
+.parts img {
+	margin: 2px;
+}
+.uft {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	text-align: left;
+	padding: 3px;
+	background: url("http://i.imgur.com/jvkzweu.png");
+	border: 1px solid #ddd;
+	margin: 5px;
+}
+.uft img {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-right: 2px;
+}
+.main {
+	top: 75px;
+	left: 250px;
+	width: 700px;
+	height: 700px;
+	overflow: hidden;
+	line-height: 18px;
+}
+.cont {
+	width: 675px;
+	height: 350px;
+	padding-right: 6px;
+	overflow: auto;
+	margin-bottom: 1000px;
+	color: #fff;
+}
+.main b {
+	font: 12px courier;
+	font-weight: bold;
+	color: #0ff;
+}
+.main i {
+	font: italic 11px georgia;
+	color: #f62681;
+}
+.main a {
+	color: #0ff;
+	text-decoration: none;
+	font: 11px courier;
+	text-transform: uppercase;
+}
+.main a:hover {
+	font-style: italic;
+	text-transform: lowercase;
+	color: #000;
+}
+.main h1 {
+	margin: 0;
+	font: 25px optima;
+	letter-spacing: -1px;
+	text-align: right;
+	width: 100%;
+	border-bottom: 2px solid #88e;
+	color: #0ff;
+	margin-bottom: 10px;
+}
+.main .float {
+	float: left;
+	margin-right: 8px;
+}
+.main .framed {
+	width: 675px;
+	margin: 8px auto;
+	display: block;
+	padding: 4px;
+	background: #f4f4f4;
+	border: 1px solid #fbaff7;
+}
+.image {
+	float: left;
+	margin-right: 3em;
+}
+a img {
+	border-width: 0;
+}
+#dailies {
+	margin: 0px auto;
+	width: 625px;
+	overflow: hidden;
+	padding: 4px;
+	text-align: center;
+	color: #f62681;
+	font: 7pt Verdana;
+	line-height: 14px;
+}
+#dailies a {
+	width: 16.66%;
+	display: block;
+	height: 80px;
+	float: left;
+	padding: 5px 0px;
+	color: #fff;
+	text-decoration: none;
+}
+#dailies a:hover {
+	color: #0ff;
+}
+#dailies a img {
+	display: block;
+	width: 60px;
+	margin: 0px auto;
+}
+</style><div class="title" style="position: absolute;">
+  Zein's <i>Portfolio</i><br><span>Mmm, chaos!</span>
+</div>
+
+<div class="nav" style="position: absolute;">
+  <a href="#one" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">About</span></a>
+<br><a href="#two" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">Pets</span></a>
+<br><a href="#three" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">UFT</span></a>
+<br><a href="#four" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">Goals</span></a>
+<br><a href="#five" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">Dailies</span></a>
+<br><a href="#six" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">Guild</span></a>
+<br><a href="#seven" style="border-radius: 24px;">
+    <span style="border-radius: 18px;">Credits</span>
+  </a>
+</div>
+
+<div class="main" style="position: absolute;">
+
+  <div class="cont" id="one">
+    <h1>I'm here for a good time, not a long time</h1>
+    <a href="/~Koji"><img src="http://i.imgur.com/HdO2SqW.png" width="200" class="image"></a> <br><center>Heylo, there! Call me Zein (pronounced like 'reign') and welcome to my portfolio~ I've been playing since 2001 though this account was frozen for 10 years. I only fully came back when I got it back, but I'm often on hiatus due to IRL priorities.<p></p>36/F/AR<br>Alt girl nerd with a grey cat personality<br>Books | Music | Sushi<p></p><br>Accounts<br><a href="http://www.neopets.com/userlookup.phtml?user=temperamental_artist">Main</a> | <a href="http://www.neopets.com/userlookup.phtml?user=vanitas_mori">Spooky</a> | <a href="http://www.neopets.com/userlookup.phtml?user=coyotlcoatl">Scholars</a> | <a href="http://www.neopets.com/userlookup.phtml?user=vanitasvivere">Misc</a> | <a href="http://www.neopets.com/userlookup.phtml?user=zeinjavecoatl">Trades</a><br><img src="http://images.neopets.com/neoboards/smilies/coffee.gif"></center>
+  </div>
+
+  <div class="cont" id="two">
+    <h1>So much character, so little time</h1>
+<center><b>Derelict Mansion</b> grunge kids and monstrous softies; Haunted Woods</center>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Asmeowdeus"><img src="http://outfits.openneo-assets.net/outfits/2957581/v/1730305727/300.png"></a><i>Asmeowdeus</i><br><br>Neofication of my youngest cat and the "Alice" in my Anxietyland headspace.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Bowszer"><img src="http://outfits.openneo-assets.net/outfits/3108180/v/1729637747/300.png"></a><i>Bowszer</i><br><br>WIP, don't want to do a direct copy of Bowser but I like the idea of him being a bully that just wants to be loved.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Chantaerelle"><img src="http://pets.neopets.com/cpn/Chantaerelle/1/5.png"></a><i>Chantaerelle</i><br><br>Anxietyland's gardener, deeply rooted in the world, and liable to slip nightshade in your tea.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Claesz"><img src="http://outfits.openneo-assets.net/outfits/3082150/v/1731533242/300.png"></a><i>Claesz</i><br><br>King of Spades, guide for those that fail to find their way out of Anxietyland to find a peaceful rest.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Cremela"><img src="http://outfits.openneo-assets.net/outfits/3035013/v/1728865571/300.png"></a><i>Cremela</i><br><br>Lover of all things spooky and responsible for the holiday celebrations.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Loveure"><img src="http://outfits.openneo-assets.net/outfits/3043813/v/1729047695/300.png"></a><i>Loveure</i><br><br>Love and anxiety often don't mix and Loveure especially enjoys the visitors trying to find their way back to loved ones.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Grimlein"><img src="http://outfits.openneo-assets.net/outfits/3043773/v/1729639417/300.png"></a><i>Grimlein</i><br><br>Will literally set fire to anything because it's an opportunity to build back better. Reckless and impulsive, do not trust.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Haraitio"><img src="http://pets.neopets.com/cpn/Haraitio/1/5.png"></a><i>Haraitio</i><br><br>Thrower of pity parties, though he's liable to bite those who just enjoy being the victim. "Life hurts, bite back" but he's a good shoulder to cry on.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Hexperiment"><img src="http://outfits.openneo-assets.net/outfits/3039820/v/1728006167/300.png"></a><i>Hexperiment</i><br><br>Nobody knows where it came from or why, and it's the only real terror in Anxietyland that everyone agrees visitors should steer clear of.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Morticia_addams"><img src="http://pets.neopets.com/cpn/morticia_addams/1/5.png"></a><i>Morticia_addams</i><br><br>Mischievous, mysterious, and friendly enough. She does bite- 100% vicious, 0% damage.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Necrowmancer"><img src="http://outfits.openneo-assets.net/outfits/3082174/v/1730252014/300.png"></a><i>Necrowmancer</i><br><br>WIP, idolizes the Black Pteri.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Reavr"><img src="http://outfits.openneo-assets.net/outfits/2965160/v/1724389982/300.png"></a><i>Reavr</i><br><br>Snobbish vampiric vulture, best friends with Vsera.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Vsera"><img src="http://outfits.openneo-assets.net/outfits/2965182/v/1716237101/300.png"></a><i>Vsera</i><br><br>Reclusive murderess with a few axes to grind.
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Xandiego"><img src="http://outfits.openneo-assets.net/outfits/3093535/v/1728006216/300.png"></a><i>Xandiego</i><br><br>Dancer with dreams of being a rock star, party boy, but with a heart of gold despite years of trauma.
+</div>
+<hr><center><b>Candycore</b> colorful and spooky; Faerieland</center>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Aaiga"><img src="http://outfits.openneo-assets.net/outfits/2998847/v/1716414037/300.png"></a><i>Aaiga</i><br><br>WIP, no thoughts just pretty
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Amurs"><img src="http://outfits.openneo-assets.net/outfits/3043909/v/1730152734/300.png"></a><i>Amurs</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Chromatticus"><img src="http://outfits.openneo-assets.net/outfits/2956199/v/1727848241/300.png"></a><i>Chromatticus</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Glumalee"><img src="http://outfits.openneo-assets.net/outfits/3082187/v/1731389478/300.png"></a><i>Glumalee</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Nephistous"><img src="http://outfits.openneo-assets.net/outfits/3037281/v/1730247121/300.png"></a><i>Nephistous</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Skeletini"><img src="http://outfits.openneo-assets.net/outfits/3098053/v/1729634831/300.png"></a><i>Skeletini</i><br><br>blurb
+</div>
+<hr><center><b>Librarians</b> time travelling scholars; Lost Desert</center>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Aarmani"><img src="http://pets.neopets.com/cpn/Aarmani/1/5.png"></a><i>Aarmani</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Elicante"><img src="http://outfits.openneo-assets.net/outfits/3042546/v/1728865293/300.png"></a><i>Elicante</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Guiniivere"><img src="http://outfits.openneo-assets.net/outfits/3055558/v/1727841781/300.png"></a><i>Guiniivere</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Luzcipher"><img src="http://pets.neopets.com/cpn/Luzcipher/1/5.png"></a><i>Luzcipher</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Lycaonoides"><img src="http://pets.neopets.com/cpn/Lycaonoides/1/5.png"></a><i>Lycaonoides</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Niloticus"><img src="http://pets.neopets.com/cpn/Niloticus/1/5.png"></a><i>Niloticus</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Orbliveon"><img src="http://outfits.openneo-assets.net/outfits/3063256/v/1728418281/300.png"></a><i>Orbliveon</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Shepyrd"><img src="http://outfits.openneo-assets.net/outfits/3089060/v/1731357638/300.png"></a><i>Shepyrd</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Synthetech"><img src="http://outfits.openneo-assets.net/outfits/3078711/v/1724524767/300.png"></a><i>Synthetech</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Tokiime"><img src="http://outfits.openneo-assets.net/outfits/3035489/v/1713843755/300.png"></a><i>Tokiime</i><br><br>blurb
+</div>
+<hr><center><b>Wild</b> and free; various locations</center>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Anesiedora"><img src="http://outfits.openneo-assets.net/outfits/3091666/v/1728421388/300.png"></a><i>Anesiedora</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Daeviina"><img src="http://outfits.openneo-assets.net/outfits/3101118/v/1727150816/300.png"></a><i>Daeviina</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Krikeas"><img src="http://outfits.openneo-assets.net/outfits/3117620/v/1731603771/300.png"></a><i>Krikeas</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=Lakouna"><img src="http://outfits.openneo-assets.net/outfits/3087151/v/1731603207/300.png"></a><i>Lakouna</i><br><br>blurb
+</div>
+<div class="uft">
+<a href="/petlookup.phtml?pet=nico_bello"><img src="http://pets.neopets.com/cpn/nico_bello/1/5.png"></a><i>nico_bello</i><br><br>blurb
+</div>
+
+<hr><center><b>Pending</b> still customizing; various locations<br><a href="/petlookup.phtml?pet=Artahx"><img src="http://pets.neopets.com/cpn/Artahx/1/1.png"></a> <a href="/petlookup.phtml?pet=Drakahz"><img src="http://pets.neopets.com/cpn/Drakahz/1/1.png"></a> <a href="/petlookup.phtml?pet=Faustly"><img src="http://pets.neopets.com/cpn/Faustly/1/1.png"></a> <a href="/petlookup.phtml?pet=Harleyqin"><img src="http://pets.neopets.com/cpn/Harleyqin/1/1.png"></a> <a href="/petlookup.phtml?pet=Inscrypt"><img src="http://pets.neopets.com/cpn/Inscrypt/1/1.png"></a> <a href="/petlookup.phtml?pet=Jereicho"><img src="http://pets.neopets.com/cpn/Jereicho/1/1.png"></a> <a href="/petlookup.phtml?pet=Lonlines"><img src="http://pets.neopets.com/cpn/Lonlines/1/1.png"></a> <a href="/petlookup.phtml?pet=Noctid"><img src="http://pets.neopets.com/cpn/Noctid/1/1.png"></a> <a href="/petlookup.phtml?pet=Noirvernen"><img src="http://pets.neopets.com/cpn/Noirvernen/1/1.png"></a> <a href="/petlookup.phtml?pet=Optehryx"><img src="http://pets.neopets.com/cpn/Optehryx/1/1.png"></a> <a href="/petlookup.phtml?pet=Piryton"><img src="http://pets.neopets.com/cpn/Piryton/1/1.png"></a> <a href="/petlookup.phtml?pet=Radzilla"><img src="http://pets.neopets.com/cpn/Radzilla/1/1.png"></a> <a href="/petlookup.phtml?pet=Rhysaend"><img src="http://pets.neopets.com/cpn/Rhysaend/1/1.png"></a> <a href="/petlookup.phtml?pet=Stolaiz"><img src="http://pets.neopets.com/cpn/Stolaiz/1/1.png"></a> <a href="/petlookup.phtml?pet=Vocerry"><img src="http://pets.neopets.com/cpn/Vocerry/1/1.png"></a> <a href="/petlookup.phtml?pet=Vodaun"><img src="http://pets.neopets.com/cpn/Vodaun/1/1.png"></a> <a href="/petlookup.phtml?pet=Vyiirus"><img src="http://pets.neopets.com/cpn/Vyiirus/1/1.png"></a> <a href="/petlookup.phtml?pet=Vyntriliquist"><img src="http://pets.neopets.com/cpn/Vyntriliquist/1/1.png"></a> <a href="/petlookup.phtml?pet=Xenovader"><img src="http://pets.neopets.com/cpn/Xenovader/1/1.png"></a></center>
+</div>
+
+  <div class="cont" id="three">
+    <h1>Fodder, fodder everywhere</h1>
+<div class="uft">
+    <a href="/petlookup.phtml?pet=Alchumy"><img src="http://pets.neopets.com/cpn/Alchumy/1/2.png"></a><b>Alchumy</b><br><br>
+    MS<br>Birthday: 27th January (Y24)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Alixtor"><img src="http://pets.neopets.com/cpn/Alixtor/1/2.png"></a><b>Alixtor</b><br><br>
+    MS<br>Birthday: 16th October (Y26)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Anitiauthority"><img src="http://pets.neopets.com/cpn/Antiauthority/1/2.png"></a><b>Antiauthority</b><br><br>
+    RW<br>Birthday: 7th November (Y25)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <img src="http://pets.neopets.com/cpn/Apprehensiveness/1/2.png"><b>Apprehensiveness</b><br><br>
+    RW 865HSD, uneven<br>Birthday: 28th March (Y22)<br>Stronger stats ONLY!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Ayebl"><img src="http://pets.neopets.com/cpn/Ayebl/1/2.png"></a><b>Ayebl</b><br><br>
+    MS-Able/Abel<br>Birthday: 4th May (Y26)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Fabebe"><img src="http://pets.neopets.com/cpn/Fabebe/1/2.png"></a><b>Fabebe</b><br><br>
+    Pkmn MS<br>Birthday: 7th May (Y26)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Breauxdy"><img src="http://pets.neopets.com/cpn/Breauxdy/1/2.png"></a><b>Breauxdy</b><br><br>
+    Brody misspell<br>Birthday: 15th June (Y24)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Cufas"><img src="http://pets.neopets.com/cpn/Cufas/1/2.png"></a><b>Cufas</b><br><br>
+    Birthday: 16th February (Y20)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Degmond"><img src="http://pets.neopets.com/cpn/Degmond/1/2.png"></a><b>Degmond</b><br><br>
+    RN<br>Birthday: 7th May (Y25)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Ephemerism"><img src="http://pets.neopets.com/cpn/Ephemerism/1/2.png"></a><b>Ephemerism</b><br><br>
+    MS<br>Birthday: 28th April (Y26)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Kanihk"><img src="http://pets.neopets.com/cpn/Kanihk/1/2.png"></a><b>Kanihk</b><br><br>
+    Unknown draik!<br>Birthday: 13th February (Y26)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Korbri"><img src="http://pets.neopets.com/cpn/Korbri/1/2.png"></a><b>Korbri</b><br><br>
+    Birthday: 12th November (Y13)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Murllin"><img src="http://pets.neopets.com/cpn/Murllin/1/2.png"></a><b>Murllin</b><br><br>
+    RW<br>Birthday: 25th December (Y25)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Myvva"><img src="http://pets.neopets.com/cpn/Myvva/1/2.png"></a><b>Myvva</b><br><br>
+    Birthday: 16th May (Y26)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Gothq"><img src="http://pets.neopets.com/cpn/Gothq/1/2.png"></a><b>Gothq</b><br><br>
+    Birthday: 31st December (Y25)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Shouda"><img src="http://pets.neopets.com/cpn/Shouda/1/2.png"></a><b>Shouda</b><br><br>
+    Should'a misspell<br>Birthday: 4th April (Y24)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Sugitani"><img src="http://pets.neopets.com/cpn/Sugitani/1/2.png"></a><b>Sugitani</b><br><br>
+    RN-Japanese hit-man<br>Birthday: 21st March (Y26)
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Vscera"><img src="http://pets.neopets.com/cpn/Vscera/1/2.png"></a><b>Vscera</b><br><br>
+    Viscera misspell<br>Birthday: 27th April (Y26)<br>Negotiable custom available!
+  </div> <div class="uft">
+    <a href="/petlookup.phtml?pet=Zimperium"><img src="http://pets.neopets.com/cpn/Zimperium/1/2.png"></a><b>Zimperium</b><br><br>
+    RW-mobile security company<br>Birthday: 15th June (Y24)
+  </div>  
+<hr><center>Tentative! These fit my vibes and aesthetic but I'm looking for more WOW effect.<br><a href="/petlookup.phtml?pet=Cethulhu"><img src="http://pets.neopets.com/cpn/Cethulhu/1/1.png"></a> <a href="/petlookup.phtml?pet=Corvynus"><img src="http://pets.neopets.com/cpn/Corvynus/1/1.png"></a> <a href="/petlookup.phtml?pet=Irmarose"><img src="http://pets.neopets.com/cpn/Irmarose/1/1.png"></a> <a href="/petlookup.phtml?pet=Moluch"><img src="http://pets.neopets.com/cpn/Moluch/1/1.png"></a> <a href="/petlookup.phtml?pet=Ryiuzen"><img src="http://pets.neopets.com/cpn/Ryiuzen/1/1.png"></a> <a href="/petlookup.phtml?pet=Shenlung"><img src="http://pets.neopets.com/cpn/Shenlung/1/1.png"></a> <a href="/petlookup.phtml?pet=Verastiel"><img src="http://pets.neopets.com/cpn/Verastiel/1/1.png"></a></center>
+</div>
+
+  <div class="cont" id="four">
+    <h1>Goal Tracker of Doom</h1>
+<div class="section">
+  <div class="h">NC trading</div>
+<center>https://impress.openneo.net/user/7440/closet</center>
+  <div class="parts">
+    <div class="part">
+      <span class="not-done">Wish List</span>
+      <img src="http://images.neopets.com/items/nostalgic_darigan_draik.gif"><img src="http://images.neopets.com/items/nostalgic_faerie_lenny.gif"><img src="http://images.neopets.com/items/nostalgic_grey_draik.gif"></div>
+    <div class="part">
+      <span class="done">Trade List</span>
+      <img src="http://images.neopets.com/items/mall_mc_retireshenanigifts.gif"><img src="http://images.neopets.com/items/mall_mc_winter2024.gif"><img src="http://images.neopets.com/items/mall_mc_retired_winter2024.gif"></div>
+  </div>
+</div>
+
+
+<div class="section">
+  <div class="h">All things avatar</div>
+  <div class="parts">
+    <div class="part">
+      <span class="not-done">Avatars I'm aiming for</span>
+      <img src="http://images.neopets.com/neoboards/avatars/avatarcollector.gif"><img src="http://images.neopets.com/neoboards/avatars/topgamer.gif"><img src="http://images.neopets.com/neoboards/avatars/ntstar.gif"><img src="http://images.neopets.com/neoboards/avatars/beautycontest.gif"><img src="http://images.neopets.com/neoboards/avatars/spacefaerie.gif"><img src="http://images.neopets.com/neoboards/avatars/brutes_syg48s.gif"><img src="http://images.neopets.com/neoboards/avatars/seekers_slb7gh.gif"></div>
+    <div class="part">
+      <span class="not-done">RNGesus hates me ISTG</span>
+      <img src="http://images.neopets.com/neoboards/avatars/brightvale.gif"><img src="http://images.neopets.com/neoboards/avatars/snowager.gif"><img src="http://images.neopets.com/neoboards/avatars/aishascalawag.gif"><img src="http://images.neopets.com/neoboards/avatars/geraptiku_tomb.gif"><img src="http://images.neopets.com/neoboards/avatars/tdmbgpop.gif"><img src="http://images.neopets.com/neoboards/avatars/evilcoconut.gif"><img src="http://images.neopets.com/neoboards/avatars/leverofdoom.gif"><img src="http://images.neopets.com/neoboards/avatars/pooralbert.gif"></div>
+    <div class="part">
+      <span class="done">Avatars I'm proud of</span>
+      <img src="http://images.neopets.com/neoboards/avatars/toothfaerie.gif"><img src="http://images.neopets.com/neoboards/avatars/maraquansupporter.gif"><img src="http://images.neopets.com/neoboards/avatars/hoban.gif"><img src="http://images.neopets.com/neoboards/avatars/hwp_krawley.gif"><img src="http://images.neopets.com/neoboards/avatars/ncmall.gif"><img src="http://images.neopets.com/neoboards/avatars/sloth.gif"><img src="http://images.neopets.com/neoboards/avatars/neodaqtick.gif"><img src="http://images.neopets.com/neoboards/avatars/buzzin.gif"></div>
+    <div class="part">
+      <span class="done">Newest</span>
+      <img src="http://images.neopets.com/neoboards/avatars/ava_birthdaybash.gif"><img src="http://images.neopets.com/neoboards/avatars/ava_voidworks_capsule.gif"><img src="http://images.neopets.com/neoboards/avatars/ava_deadchia.gif"><img src="http://images.neopets.com/neoboards/avatars/taviteatime.gif"><img src="http://images.neopets.com/neoboards/avatars/punchbag.gif"><img src="http://images.neopets.com/neoboards/avatars/teamillusen.gif"><img src="http://images.neopets.com/neoboards/avatars/fq2023.gif"><img src="http://images.neopets.com/neoboards/avatars/pantdeviltaunt.gif"></div>
+  </div>
+</div>
+
+<div class="section" id="gallery">
+  <div class="h">Wishlists</div>
+<center>items.jellyneo.net/mywishes/zein/</center>
+<hr><div class="h">Permie Needs</div>
+  <div class="items">
+    <img src="http://images.neopets.com/items/pot_kiko_yellow.gif"><span>
+      <b>Kiko Morph (ANY)</b><br>
+      2,000,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Lupanaria">Lupanaria</a>
+    </span>
+    <img src="http://images.neopets.com/items/pb_darigan.gif"><span>
+      <b>Darigan PB</b><br>
+      1,400,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Bowszer">Bowszer</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_wonder_faerie_makeup.gif"><span>
+      <b>Age of Wonder Makeup</b><br>
+      695,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Anesiedora">Anesiedora</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_wonder_faerie_wings.gif"><span>
+      <b>Age of Wonder Wings</b><br>
+      999,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Anesiedora">Anesiedora</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_ddy14_shoes_cobweb.gif"><span>
+      <b>Cobweb Shoes</b><br>
+      200,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Claesz">Claesz</a>
+    </span>
+    <img src="http://images.neopets.com/items/bg_spooky_background.gif"><span>
+      <b>Spooky Background</b><br>
+      51,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Claesz">Claesz</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_kougra_gothic_mask.gif"><span>
+      <b>Gothic Kougra Mask</b><br>
+      111,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Gothq">Gothq</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_bloodmakeup_mutant.gif"><span>
+      <b>Blood of My Enemies Mutant Makeup</b><br>
+      720,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Reavr">Reavr</a>
+    </span>
+    <img src="http://images.neopets.com/items/gif_ddy18_spikefenfg.gif"><span>
+      <b>Spiked Metal Fence</b><br>
+      140,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Reavr">Reavr</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_draik_metalhead.gif"><span>
+      <b>Metallic Draik Head</b><br>
+      18,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Tokiime">Tokiime</a>
+    </span>
+    <img src="http://images.neopets.com/items/mcc_punkguitar.gif"><span>
+      <b>Elegant Punk Guitar</b><br>
+      400,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Xandiego">Xandiego</a>
+    </span>
+    <img src="http://images.neopets.com/items/bg_bioluminescent_beach.gif"><span>
+      <b>Bioluminescent Beach Background</b><br>
+      920,000 NP<br>
+      For: stock
+    </span>
+    <img src="http://images.neopets.com/items/clo_neon_uni_hair.gif"><span>
+      <b>Uni Neon Hair Accessory</b><br>
+      475,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Synthetech">Synthetech</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_neon_uni_shirt.gif"><span>
+      <b>Uni Neon Harness</b><br>
+      600,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Synthetech">Synthetech</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_neon_uni_shoes.gif"><span>
+      <b>Uni Neon Hooves</b><br>
+      1,200,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Synthetech">Synthetech</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_neon_uni_tail.gif"><span>
+      <b>Neon Uni Tail Accessory</b><br>
+      890,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Synthetech">Synthetech</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_neon_uni_horn.gif"><span>
+      <b>Uni Neon Horn</b><br>
+      1,200,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Synthetech">Synthetech</a>
+    </span>
+    <img src="http://images.neopets.com/items/clo_neon_uni_wings.gif"><span>
+      <b>Uni Neon Wings Decoration</b><br>
+      1,800,000 NP<br>
+      For: <a href="/petlookup.phtml?pet=Synthetech">Synthetech</a>
+    </span>
+</div>
+<hr><div class="h">Sushi Dreams</div>
+  <div class="items">
+    <img src="http://images.neopets.com/items/shf_sushi_buzz.gif"><span>
+      <b>Buzz Sushi</b><br>
+      9,400 NP
+    </span>
+     <img src="http://images.neopets.com/items/shf_sushi_chomby.gif"><span>
+      <b>Chomby Sushi</b><br>
+      109,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_eyrie_sushi.gif"><span>
+      <b>Eyrie Sushi</b><br>
+      2,200 NP
+    </span>
+    <img src="http://images.neopets.com/items/food_sushi_cone.gif"><span>
+      <b>Fresh Sushi Cone</b><br>
+      1,200,000 NP
+    </span>
+     <img src="http://images.neopets.com/items/food_sushi_round.gif"><span>
+      <b>Fresh Sushi Roll</b><br>
+      380,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_sushi_kougra.gif"><span>
+      <b>Kougra Sushi</b><br>
+      9,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_sushi_meerca.gif"><span>
+      <b>Meerca Sushi</b><br>
+      9,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_mynci_sushi.gif"><span>
+      <b>Mynci Sushi</b><br>
+      130,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_rice_sushi.gif"><span>
+      <b>Rice Sushi</b><br>
+      4,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/waterfood_roe_sushi.gif"><span>
+      <b>Roe Sushi</b><br>
+      985,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_spam_sushi.gif"><span>
+      <b>Spam Shenkuu Sushi</b><br>
+      680,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_cybunnyspotted_sushi.gif"><span>
+      <b>Spotted Cybunny Sushi</b><br>
+      UNKNOWN NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_boatsushicd.gif"><span>
+      <b>Sushi Boat</b><br>
+      7,000,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/toy_checkers_sushi.gif"><span>
+      <b>Sushi Checkers</b><br>
+      89,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_sushi_hotdog.gif"><span>
+      <b>SushiHot Dog</b><br>
+      7,200 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_sushi_platter.gif"><span>
+      <b>Sushi Platter</b><br>
+      6,700 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_tigerbuggle_sushi.gif"><span>
+      <b>Tigerbuggle Sushi</b><br>
+      3,200 NP
+    </span>
+    <img src="http://images.neopets.com/items/gif_dd_turmacsushiroll.gif"><span>
+      <b>Turmac Sushi Roll</b><br>
+      5,300 NP
+    </span>
+    <img src="http://images.neopets.com/items/piz_shenkuu6.gif"><span>
+      <b>Whole Sushi Pizza</b><br>
+      21,500 NP
+    </span>
+    <img src="http://images.neopets.com/items/foo_acy21_yooyusushi.gif"><span>
+      <b>Yooyuball Sushi</b><br>
+      1,000,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_aisha_roll_spring.gif"><span>
+      <b>Aisha Spring Roll</b><br>
+      42,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_aisha_roll_winter.gif"><span>
+      <b>Aisha Winter Roll</b><br>
+      15,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_belonthiss_roll.gif"><span>
+      <b>Belonthiss Roll</b><br>
+      12,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/shf_cyodrake_roll.gif"><span>
+      <b>Cyodrake Roll</b><br>
+      9,000 NP
+    </span>
+<img src="http://images.neopets.com/items/shf_dragonroll.gif"><span>
+      <b>Dragon Roll</b><br>
+      100,000 NP
+    </span>
+<img src="http://images.neopets.com/items/shf_rainbow_roll.gif"><span>
+      <b>Rainbow Roll</b><br>
+      3,000 NP
+    </span>
+<img src="http://images.neopets.com/items/shf_gmc2013_stormroll.gif"><span>
+      <b>Storm Roll</b><br>
+      4,000 NP
+    </span>
+</div>
+<hr><div class="h">Menagerie</div>
+  <div class="items">
+    <img src="http://images.neopets.com/items/sludgy_maraquan.gif"><span>
+      <b>Maraquan Sludgy</b><br>
+      Unreleased
+    </span>
+    <img src="http://images.neopets.com/items/flipflap_halloween.gif"><span>
+      <b>?</b><br>
+      Unreleased
+    </span>
+    <img src="http://images.neopets.com/items/flipflap_orange.gif"><span>
+      <b>?</b><br>
+      Unreleased
+    </span>
+    <img src="http://images.neopets.com/items/petpet_spooky_gothpup.gif"><span>
+      <b>Zomutt</b><br>
+      2,000,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/ukali_darigan.gif"><span>
+      <b>Darigan Ukali</b><br>
+      1,800,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/drugal_faerie.gif"><span>
+      <b>Faerie Drugal</b><br>
+      Unknown value
+    </span>
+    <img src="http://images.neopets.com/items/petpet_meowclops_black.gif"><span>
+      <b>Meowclops</b><br>
+      3,000,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/reptillior_rainbow.gif"><span>
+      <b>Rainbow Reptillior</b><br>
+      1,000,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/petpet_shadow_minion.gif"><span>
+      <b>Tainted Minion</b><br>
+      220,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/petpetpet_3.gif"><span>
+      <b>Cooty</b><br>
+      7,000,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/petpetpet_shuni.gif"><span>
+      <b>Moach</b><br>
+      3,600,000 NP
+    </span>
+    <img src="http://images.neopets.com/items/petpetpet_1.gif"><span>
+      <b>Mootix</b><br>
+      3,000,000 NP
+    </span>
+  </div>
+ </div>
+</div>
+
+  <div class="cont" id="five">
+    <h1>At what point do these become chores?</h1>
+<div id="dailies">
+<a href="http://www.neopets.com/winter/adventcalendar.phtml"><img src="http://images.neopets.com/items/fur_deluxereathnvm.gif">Advent Calendar</a>
+
+<a href="/pirates/anchormanagement.phtml?sc9ejf2=99127"><img src="http://images.neopets.com/items/plu_krawken.gif">Anchor Management</a>
+
+<a href="http://www.neopets.com/halloween/applebobbing.phtml"><img src="http://images.neopets.com/items/spf_imposter_apple.gif">Apple Bobbing</a>
+
+<a href="http://www.neopets.com/halloween/process_bagatelle.phtml"><img src="http://images.neopets.com/items/sch_bagatelle_lunchbox.gif">Bagatelle</a>
+
+<a href="/bank.phtml"><img src="http://images.neopets.com/items/toy_bankmanager_skeith.gif">Bank Interest</a>
+
+<a href="http://www.neopets.com/dome/"><img src="http://images.neopets.com/items/toy_snowglobe_battledome.gif">Battledome</a>
+
+<a href="http://www.neopets.com/pirates/buriedtreasure/index.phtml"><img src="http://images.neopets.com/items/ppph_treasurechest.gif">Buried Treasure</a>
+
+<a href="http://www.neopets.com/halloween/process_cocoshy.phtml?coconut=1"><img src="http://images.neopets.com/items/spo_coconut_6.gif">Coconut Shy</a>
+
+<a href="/desert/shrine.phtml"><img src="http://images.neopets.com/items/bd_coltzen_figure.gif">Coltzan's Shrine</a>
+
+<a href="/worlds/geraptiku/tomb.phtml"><img src="http://images.neopets.com/items/toy_deserted_tomb.gif">Deserted Tomb</a>
+
+<a href="/water/fishing.phtml"><img src="http://images.neopets.com/items/toy_crafted_fishpole.gif">Fishing Vortex</a>
+
+<a href="http://www.neopets.com/pirates/foodclub.phtml?type=bet"><img src="http://images.neopets.com/items/fatboyburger.gif">Food Club</a>
+
+<a href="http://www.neopets.com/pirates/forgottenshore.phtml"><img src="http://images.neopets.com/items/toy_chest_discoveredtreasure.gif">Forgotten Shore</a>
+
+<a href="/desert/fruitmachine.phtml"><img src="http://images.neopets.com/items/food_desert3.gif">Fruit Machine</a>
+
+<a href="http://www.neopets.com/jelly/"><img src="http://images.neopets.com/items/VanillaPassionFruitJelly.gif">Giant Jelly</a>
+
+<a href="/prehistoric/omelette.phtml"> 
+<img src="http://images.neopets.com/items/tyr_omelette_rice2.gif">Giant Omelette</a>
+
+<a href="/medieval/grumpyking.phtml"><img src="http://images.neopets.com/items/snowbunny_meridell_skarl.gif">Grumpy King</a>
+
+<a href="/faerieland/springs.phtml"><img src="http://images.neopets.com/items/pot_healingspringsres.gif">Healing Springs</a>
+
+<a href="http://www.neopets.com/worlds/kiko/kpop/"><img src="http://images.neopets.com/items/can_kiko_pop.gif">Kiko Pop</a>
+
+<a href="/lab2.phtml"><img src="http://images.neopets.com/items/plu_madscientist_labray.gif"> Lab Ray</a>
+
+<a href="/shenkuu/lunar/"><img src="http://images.neopets.com/items/fur_lunar_astrolabe.gif">Lunar Temple</a>
+
+<a href="/moon/meteor.phtml"><img src="http://images.neopets.com/items/bd_glowing_rock.gif">Meteor</a>
+
+<a href="http://www.neopets.com/donations.phtml"><img src="http://images.neopets.com/items/mini_moneytree.gif">Money Tree</a>
+
+<a href="http://www.neopets.com/freebies/"><img src="http://images.neopets.com/items/nbo_monthofeating.gif">Monthly Freebies</a>
+
+<a href="http://www.neopets.com/shenkuu/neggcave/"><img src="http://images.neopets.com/items/toy_fony15_neggpuzzle.gif">Negg Puzzle</a>
+
+<a href="/petpetlab.phtml"><img src="http://images.neopets.com/items/plu_madscientist_kookith.gif"> Petpet Lab Ray</a>
+
+<a href="http://ncmall.neopets.com/games/giveaway/process_giveaway.phtml"><img src="http://images.neopets.com/items/mall_bg_qasalanexpellibox.gif">Qasalan Expellibox</a>
+
+<a href="/shop_of_offers.phtml?slorg_payout=yes"><img src="http://images.neopets.com/items/hall_petpet1.gif">Rich Slorg</a>
+
+<a href="http://www.neopets.com/medieval/rubbishdump.phtml"><img src="http://images.neopets.com/items/bg_rubbishdump.gif">Rubbish Dump</a>
+
+<a href="http://www.neopets.com/freebies/tarlastoolbar.phtml"><img src="http://images.neopets.com/items/gar_tarla_travelinggnome.gif">Tarla</a>
+
+<a href="/faerieland/tdmbgpop.phtml"><img src="http://images.neopets.com/items/toy_bluegrundo.gif">TDMGPOP</a>
+
+<a href="http://www.neopets.com/halloween/strtest/process_strtest.phtml"><img src="http://images.neopets.com/items/tys_weeklingpin.gif">Test Your Strength</a>
+
+<a href="/island/tombola.phtml"><img src="http://images.neopets.com/items/toy_christmas_tombola_guy.gif">Tombola</a>
+
+<a href="/medieval/turmaculus.phtml"><img src="http://images.neopets.com/items/toy_turmaculus_figure.gif"> Turmaculus</a>
+
+<a href="http://www.neopets.com/trudys_surprise.phtml"><img src="http://images.neopets.com/items/toy_slot_machine.gif">Trudy's Surprise</a>
+
+<a href="/medieval/wiseking.phtml"><img src="http://images.neopets.com/items/plu_skeith_hagan.gif">Wise King</a>
+</div>
+</div>
+
+  <div class="cont" id="six">
+    <h1>Rank: Sparklepup</h1>
+    <center><img src="http://i.imgur.com/uFTxynbm.png" class="image"><br>Guild Webbies:<br><a href="http://www.neopets.com/~Enthusiastics"><img src="http://i.imgur.com/JsCvriv.gif"></a><a href="http://www.neopets.com/~Sparklurs"><img src="http://i.postimg.cc/vZ6yWMr4/art-page.gif"></a><p></p>Participation Badges:<br><img src="http://images2.imgbox.com/3e/8a/N5J4MJ8g_o.png"><img src="http://images2.imgbox.com/7e/cb/Md8AQ4nu_o.png"><p></p><img src="http://i.imgur.com/zwlf8oD.png" width="75"><img src="http://images2.imgbox.com/3a/e5/WXgk6vG4_o.gif" width="75"></center>
+  </div>
+
+  <div class="cont" id="seven">
+    <h1>Sitely</h1>
+    <b>Layout graphics by </b><a href="/~Nessa_Saralonde">Jewel</a><br><b>Layout coding by</b> <a href="/~accury">Beetle</a><br><b>Low opacity fills and pocket dailies by </b><a href="/~cecira">LOLWHUT</a>
+  </div>
+
+</div>
